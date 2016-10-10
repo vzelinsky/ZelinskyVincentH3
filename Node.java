@@ -1,10 +1,10 @@
 public class Node {
   //fields
-  int data;
+  String data;
   Node next;
   
   //constructors
-  public Node(int dataInput) {
+  public Node(String dataInput) {
     this.data = dataInput;
     this.next = null;
   }
