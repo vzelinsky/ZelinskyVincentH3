@@ -4,6 +4,10 @@ public class Node {
   Node next;
   
   //constructors
+  public Node(int dataInput) {
+    this.data = dataInput;
+    this.next = null;
+  }
   
   //methods
 }
