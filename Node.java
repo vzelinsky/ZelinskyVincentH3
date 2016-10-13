@@ -9,5 +9,10 @@ public class Node {
     this.next = null;
   }
   
+  public Node(String dataInput, Node n) {
+    this.data = dataInput;
+    this.next = n;
+  }
+  
   //methods
 }
