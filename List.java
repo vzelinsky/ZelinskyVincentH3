@@ -1,17 +1,26 @@
 public class List {
   //fields
   Node head;
+  Node tail;
   
   //constructors
   public List() {
     this.head = null;
+    this.tail = null;
   }
   
   //methods
   //adds a node to the head of the list and passes a String to it
   public void addNode(String dataInput) {
-    this.head = new Node(dataInput);
-    //FIX: just adds node to head and overwrites the previous head
+    if (head == null) {
+      head = new Node(dataInput);
+      tail = head;
+    }
+    else {
+      tail.next = new Node(dataInput);
+      tail = tail.next;
+    }
+    //FIXED?: just adds node to head and overwrites the previous head
   }
   
   //traverses list and prints
