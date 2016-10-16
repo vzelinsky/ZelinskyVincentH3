@@ -15,14 +15,24 @@ public class List {
     if (head == null) {
       head = new Node(dataInput);
       tail = head;
-      System.out.println("head"+head.data);
-      System.out.println("tail"+tail.data);
     }
     else {
-      tail.next = new Node(dataInput);
-      tail = tail.next;
+      Node t;
+      t = head;
+      while((t.data).compareTo(dataInput) < 0) {
+        if(t.next == null) {
+          tail.next = new Node(dataInput);
+          tail = tail.next;
+          break;
+        }
+        else {
+          t = t.next;
+        }
+      }
+      if((t.data).compareTo(dataInput) > 0) {
+          System.out.println("I've caught Barb");
+      }
     }
-    //FIXED?: just adds node to head and overwrites the previous head
   }
   
   //traverses list and prints

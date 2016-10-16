@@ -10,10 +10,8 @@ public class LinkedLists
     List myList = new List();
     myList.addNode("Anne");
     myList.addNode("Charlie");
-    //myList.addNode("Barb");
-    //myList.addNode("Earl");
+    myList.addNode("Barb");
+    myList.addNode("Earl");
     myList.printList();
-    System.out.println("head"+myList.head.data);
-    System.out.println("tail"+myList.tail.data);
   }
 }
