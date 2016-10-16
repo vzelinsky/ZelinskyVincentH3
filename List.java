@@ -15,6 +15,8 @@ public class List {
     if (head == null) {
       head = new Node(dataInput);
       tail = head;
+      System.out.println("head"+head.data);
+      System.out.println("tail"+tail.data);
     }
     else {
       tail.next = new Node(dataInput);

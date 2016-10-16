@@ -9,9 +9,9 @@ public class LinkedLists
   {
     List myList = new List();
     myList.addNode("Anne");
-    myList.addNode("Charlie");
-    myList.addNode("Barb");
-    myList.addNode("Earl");
+    //myList.addNode("Charlie");
+    //myList.addNode("Barb");
+    //myList.addNode("Earl");
     myList.printList();
   }
 }
