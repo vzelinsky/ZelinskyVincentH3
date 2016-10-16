@@ -31,6 +31,8 @@ public class List {
       }
       if((t.data).compareTo(dataInput) > 0) {
           System.out.println("I've caught Barb");
+          //if t == head
+          //else xyz
       }
     }
   }
