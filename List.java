@@ -11,6 +11,7 @@ public class List {
   
   //methods
   //adds a node to the head of the list and passes a String to it
+  //more comments
   public void addNode(String dataInput) {
     if (head == null) {
       head = new Node(dataInput);
