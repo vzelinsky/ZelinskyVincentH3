@@ -26,7 +26,7 @@ public class List {
           tail = tail.next;
           break;
         }
-        else if((t.next.data).compareTo(dataInput) > 0) {
+        else if((t.next.data).compareTo(dataInput) >= 0) {
           Node j;
           j = t.next;
           t.next = new Node(dataInput);
