@@ -12,6 +12,7 @@ public class LinkedLists
     myList.addNode("Charlie");
     myList.addNode("Barb");
     myList.addNode("Earl");
+    myList.addNode("Barl");
     myList.printList();
   }
 }

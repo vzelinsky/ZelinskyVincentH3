@@ -26,14 +26,16 @@ public class List {
           tail = tail.next;
           break;
         }
+        else if((t.next.data).compareTo(dataInput) > 0) {
+          Node j;
+          j = t.next;
+          t.next = new Node(dataInput);
+          t.next.next = j;
+          break;
+        }
         else {
           t = t.next;
         }
-      }
-      if((t.data).compareTo(dataInput) > 0) {
-          System.out.println("I've caught Barb");
-          //if t == head
-          //else xyz
       }
     }
   }
