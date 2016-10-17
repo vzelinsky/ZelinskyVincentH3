@@ -26,15 +26,6 @@ public class List {
           tail = tail.next;
           break;
         }
-        else if((t.data).compareTo(dataInput) >= 0) {
-          //FIX doesn't catch Abel
-          System.out.println("I've caught Abel");
-          Node j;
-          j = head;
-          head = new Node(dataInput);
-          head.next = j;
-          break;
-        }
         else if((t.next.data).compareTo(dataInput) >= 0) {
           Node j;
           j = t.next;
@@ -45,6 +36,12 @@ public class List {
         else {
           t = t.next;
         }
+      }
+      if((t.data).compareTo(dataInput) >= 0) {
+          Node j;
+          j = head;
+          head = new Node(dataInput);
+          head.next = j;
       }
     }
   }
