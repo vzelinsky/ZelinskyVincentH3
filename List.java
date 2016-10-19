@@ -55,4 +55,12 @@ public class List {
       ref = ref.next;
     }
   }
+  //traverses list and prints
+  public void printListb() {
+    Node ref = tail;
+    while (ref != null) {
+      System.out.println(ref.data);
+      ref = ref.prev;
+    }
+  }
 }
