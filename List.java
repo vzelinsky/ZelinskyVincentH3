@@ -38,6 +38,7 @@ public class List {
           t = t.next;
         }
       }
+      //FIX set prev for this
       if((t.data).compareTo(dataInput) >= 0) {
           Node j;
           j = head;
@@ -55,7 +56,7 @@ public class List {
       ref = ref.next;
     }
   }
-  //traverses list and prints
+  //traverses list and prints backwards
   public void printListb() {
     Node ref = tail;
     while (ref != null) {
