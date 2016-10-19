@@ -22,15 +22,16 @@ public class List {
       t = head;
       while((t.data).compareTo(dataInput) < 0) {
         if(t.next == null) {
-          tail.next = new Node(dataInput);
+          tail.next = new Node(dataInput, null, tail);
           tail = tail.next;
           break;
         }
         else if((t.next.data).compareTo(dataInput) >= 0) {
           Node j;
           j = t.next;
-          t.next = new Node(dataInput);
-          t.next.next = j;
+          t.next = new Node(dataInput, j, t);
+          //necessary? t.next.next = j;
+          j.prev = t.next;
           break;
         }
         else {
