@@ -38,7 +38,7 @@ public class List {
           t = t.next;
         }
       }
-      //FIX set prev for this
+      //FIX set prev for this... or do i?
       if((t.data).compareTo(dataInput) >= 0) {
           Node j;
           j = head;
