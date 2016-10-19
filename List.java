@@ -42,8 +42,8 @@ public class List {
       if((t.data).compareTo(dataInput) >= 0) {
           Node j;
           j = head;
-          head = new Node(dataInput);
-          head.next = j;
+          head = new Node(dataInput, j, null);
+          j.prev = head;
       }
     }
   }
