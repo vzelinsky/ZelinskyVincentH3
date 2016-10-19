@@ -11,10 +11,10 @@ public class List {
   
   //methods
   //getters
-  public String getHead() {
+  public String getHeadData() {
     return head.getData();
   }
-  public String getTail() {
+  public String getTailData() {
     return tail.getData();
   }
   //adds a node to the head of the list and passes a String to it
@@ -25,8 +25,7 @@ public class List {
       tail = head;
     }
     else {
-      Node t;
-      t = head;
+      Node t = head;
       while((t.getData()).compareTo(dataInput) < 0) {
         if(t.getNext() == null) {
           Node n = new Node(dataInput, null, tail);
@@ -35,8 +34,7 @@ public class List {
           break;
         }
         else if((t.getNext().getData()).compareTo(dataInput) >= 0) {
-          Node j;
-          j = t.getNext();
+          Node j = t.getNext();
           Node n = new Node(dataInput, j, t);
           t.setNext(n);
           j.setPrev(t.getNext());
@@ -48,8 +46,7 @@ public class List {
       }
       //FIX set prev for this... or do i?
       if((t.getData()).compareTo(dataInput) >= 0) {
-          Node j;
-          j = head;
+          Node j = head;
           head = new Node(dataInput, j, null);
           j.setPrev(head);
       }
