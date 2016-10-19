@@ -1,8 +1,8 @@
 public class Node {
   //fields
-  String data;
-  Node next;
-  Node prev;
+  private String data;
+  private Node next;
+  private Node prev;
   
   //constructors
   public Node(String dataInput) {
@@ -17,5 +17,24 @@ public class Node {
     this.prev = p;
   }
   
-  //methods
+  //getter methods
+  public String getData(){
+    return data;
+  }
+  public Node getNext(){
+    return next;
+  }
+  public Node getPrev(){
+    return prev;
+  }
+  //setter methods
+  public void setData(String dataInput){
+    this.data = dataInput;
+  }
+  public void setNext(Node nextInput){
+    this.next = nextInput;
+  }
+  public void setPrev(Node prevInput){
+    this.prev = prevInput;
+  }
 }

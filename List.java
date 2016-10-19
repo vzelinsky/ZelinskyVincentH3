@@ -1,7 +1,7 @@
 public class List {
   //fields
-  Node head;
-  Node tail;
+  private Node head;
+  private Node tail;
   
   //constructors
   public List() {
@@ -10,6 +10,13 @@ public class List {
   }
   
   //methods
+  //getters
+  public String getHead() {
+    return head.getData();
+  }
+  public String getTail() {
+    return tail.getData();
+  }
   //adds a node to the head of the list and passes a String to it
   //more comments
   public void addNode(String dataInput) {
@@ -20,30 +27,31 @@ public class List {
     else {
       Node t;
       t = head;
-      while((t.data).compareTo(dataInput) < 0) {
-        if(t.next == null) {
-          tail.next = new Node(dataInput, null, tail);
-          tail = tail.next;
+      while((t.getData()).compareTo(dataInput) < 0) {
+        if(t.getNext() == null) {
+          Node n = new Node(dataInput, null, tail);
+          tail.setNext(n);
+          tail = tail.getNext();
           break;
         }
-        else if((t.next.data).compareTo(dataInput) >= 0) {
+        else if((t.getNext().getData()).compareTo(dataInput) >= 0) {
           Node j;
-          j = t.next;
-          t.next = new Node(dataInput, j, t);
-          //necessary? t.next.next = j;
-          j.prev = t.next;
+          j = t.getNext();
+          Node n = new Node(dataInput, j, t);
+          t.setNext(n);
+          j.setPrev(t.getNext());
           break;
         }
         else {
-          t = t.next;
+          t = t.getNext();
         }
       }
       //FIX set prev for this... or do i?
-      if((t.data).compareTo(dataInput) >= 0) {
+      if((t.getData()).compareTo(dataInput) >= 0) {
           Node j;
           j = head;
           head = new Node(dataInput, j, null);
-          j.prev = head;
+          j.setPrev(head);
       }
     }
   }
@@ -52,16 +60,16 @@ public class List {
   public void printList() {
     Node ref = head;
     while (ref != null) {
-      System.out.println(ref.data);
-      ref = ref.next;
+      System.out.println(ref.getData());
+      ref = ref.getNext();
     }
   }
   //traverses list and prints backwards
   public void printListb() {
     Node ref = tail;
     while (ref != null) {
-      System.out.println(ref.data);
-      ref = ref.prev;
+      System.out.println(ref.getData());
+      ref = ref.getPrev();
     }
   }
 }
