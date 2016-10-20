@@ -19,5 +19,6 @@ public class LinkedLists
     myList.printList();
     System.out.println("---------------------------------");
     myList.printListb();
+    //System.out.println(myList.getHead().getData());
   }
 }
