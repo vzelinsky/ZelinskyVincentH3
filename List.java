@@ -104,19 +104,29 @@ public class List {
     }
   }
   
-  //traverses list and prints
-  public void printList() {
+  //printListForward method 
+  //Traverses list and prints every Node alphabetically forward (from head to tail)
+  public void printListForward() {
+    //Initializes a reference Node, ref, at head
     Node ref = head;
+    //While the Node ref is not equal to null loop
     while (ref != null) {
+      //Print the data stored in the current Node that Node ref is at
       System.out.println(ref.getData());
+      //Traverse Node ref to the next Node in the List
       ref = ref.getNext();
     }
   }
-  //traverses list and prints backwards
-  public void printListb() {
+  //printListBackward method 
+  //Traverses list and prints every Node alphabetically backward (from tail to head)
+  public void printListBackward() {
+    //Initializes a reference Node, ref, at tail
     Node ref = tail;
+    //While the Node ref is not equal to null loop
     while (ref != null) {
+      //Print the data stored in the current Node that Node ref is at
       System.out.println(ref.getData());
+      //Traverse Node ref to the prev Node in the List
       ref = ref.getPrev();
     }
   }

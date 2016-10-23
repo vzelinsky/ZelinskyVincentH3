@@ -16,9 +16,9 @@ public class LinkedLists
     myList.addNode("Abel");
     myList.addNode("Delta");
     myList.addNode("Zack");
-    myList.printList();
+    myList.printListForward();
     System.out.println("---------------------------------");
-    myList.printListb();
+    myList.printListBackward();
     //System.out.println(myList.getHead().getData());
   }
 }
