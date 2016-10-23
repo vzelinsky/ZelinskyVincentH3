@@ -136,6 +136,7 @@ public class List {
   //Traverses the List until it finds a Node with the same String as the arugment and returns that Node
   public Node findNode(String dataInput) {
     Node t = head;
+    int i = 1;
     while((t.getData()).compareTo(dataInput) != 0) {
       //
       /* Implement a Null object pattern if time allows
@@ -145,8 +146,10 @@ public class List {
       }
       else {
         t = t.getNext();
+        i++;
       }
     }
+    System.out.println("The String "+dataInput+" matches Node number "+i);
     return t;
   }
 }

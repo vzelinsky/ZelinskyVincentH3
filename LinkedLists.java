@@ -20,5 +20,6 @@ public class LinkedLists
     System.out.println("---------------------------------");
     myList.printListBackward();
     //System.out.println(myList.getHead().getData());
+    System.out.println(myList.findNode("Abel"));
   }
 }
