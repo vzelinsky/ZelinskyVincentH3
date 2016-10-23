@@ -104,6 +104,7 @@ public class List {
     }
   }
   
+  //Print methods
   //printListForward method 
   //Traverses list and prints every Node alphabetically forward (from head to tail)
   public void printListForward() {
@@ -130,4 +131,7 @@ public class List {
       ref = ref.getPrev();
     }
   }
+  
+  //findNode method
+  //Traverses the List until it finds a Node with the same String ad the arugment ... 
 }
