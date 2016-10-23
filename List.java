@@ -133,5 +133,8 @@ public class List {
   }
   
   //findNode method
-  //Traverses the List until it finds a Node with the same String ad the arugment ... 
+  //Traverses the List until it finds a Node with the same String as the arugment and returns that Node
+  public Node findNode(String dataInput) {
+    
+  }
 }
