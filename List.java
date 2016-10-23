@@ -38,7 +38,7 @@ public class List {
   public void addNode(String dataInput) {
     //Case 1: if the List is empty (head = null)
     //Inserts the new Node at head and makes it the tail as it is the only Node
-    if (head == null) {
+    if(head == null) {
       //Add the Node as the head
       head = new Node(dataInput);
       //Set the tail to the same Node as head
@@ -108,33 +108,39 @@ public class List {
   //printListForward method 
   //Traverses list and prints every Node alphabetically forward (from head to tail)
   public void printListForward() {
-    //Initializes a reference Node, ref, at head
-    Node ref = head;
-    //While the Node ref is not equal to null loop
-    while (ref != null) {
-      //Print the data stored in the current Node that Node ref is at
-      System.out.println(ref.getData());
-      //Traverse Node ref to the next Node in the List
-      ref = ref.getNext();
+    //Initializes a traversal Node, t, at head
+    Node t = head;
+    //While the Node t is not equal to null loop
+    while(t != null) {
+      //Print the data stored in the current Node that Node t is at
+      System.out.println(t.getData());
+      //Traverse Node t to the next Node in the List
+      t = t.getNext();
     }
   }
   //printListBackward method 
   //Traverses list and prints every Node alphabetically backward (from tail to head)
   public void printListBackward() {
-    //Initializes a reference Node, ref, at tail
-    Node ref = tail;
-    //While the Node ref is not equal to null loop
-    while (ref != null) {
-      //Print the data stored in the current Node that Node ref is at
-      System.out.println(ref.getData());
-      //Traverse Node ref to the prev Node in the List
-      ref = ref.getPrev();
+    //Initializes a traversal Node, t, at tail
+    Node t = tail;
+    //While the Node t is not equal to null loop
+    while(t != null) {
+      //Print the data stored in the current Node that Node t is at
+      System.out.println(t.getData());
+      //Traverse Node t to the prev Node in the List
+      t = t.getPrev();
     }
   }
   
   //findNode method
   //Traverses the List until it finds a Node with the same String as the arugment and returns that Node
   public Node findNode(String dataInput) {
-    
+    Node t = head;
+    while((t.getData()).compareTo(dataInput) != 0) {
+      if(t.getNext() = null) {
+        return ("Error: the Node does not exist"); // cant return string
+      }
+      t = t.getNext()
+    }
   }
 }
