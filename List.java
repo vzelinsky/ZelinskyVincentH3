@@ -152,4 +152,11 @@ public class List {
     System.out.println("The String "+dataInput+" matches Node number "+i);
     return t;
   }
+  
+  //deleteNode method
+  //Calls the findNode method and passes the argument, then deletes the returned Node
+  public void deleteNode(String dataInput) {
+    Node n = findNode(dataInput);
+    System.out.println(n.getData());
+  }
 }

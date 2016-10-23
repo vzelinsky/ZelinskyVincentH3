@@ -21,5 +21,6 @@ public class LinkedLists
     myList.printListBackward();
     //System.out.println(myList.getHead().getData());
     System.out.println(myList.findNode("Abel"));
+    myList.deleteNode("Joe");
   }
 }
