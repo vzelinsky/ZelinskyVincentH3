@@ -11,6 +11,7 @@ public class Node {
   private Node next;
   //Contains a reference to the prev Node object
   private Node prev;
+  //Contains a reference to the curr Node object
   
   //Constructors
   //Accepts a String argument
