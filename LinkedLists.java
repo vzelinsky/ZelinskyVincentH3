@@ -20,7 +20,9 @@ public class LinkedLists
     System.out.println("---------------------------------");
     myList.printListBackward();
     //System.out.println(myList.getHead().getData());
-    System.out.println(myList.findNode("Abel"));
-    myList.deleteNode("Joe");
+    System.out.println(myList.findNode("Joe"));
+    myList.deleteNode("Zack");
+    System.out.println(myList.findNode("Joe"));
+    myList.printListForward();
   }
 }

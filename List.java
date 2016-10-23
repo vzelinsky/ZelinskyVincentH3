@@ -156,7 +156,23 @@ public class List {
   //deleteNode method
   //Calls the findNode method and passes the argument, then deletes the returned Node
   public void deleteNode(String dataInput) {
-    Node n = findNode(dataInput);
-    System.out.println(n.getData());
+    Node d = findNode(dataInput);
+    if(d == null) {
+      System.out.println("Node null");
+    }
+    else {
+      Node next = d.getNext();
+      Node prev = d.getPrev();
+      
+      if(prev == null)
+        head = next;
+      else
+        prev.setNext(next);
+      if(next == null)
+        tail = prev;
+      else
+        next.setPrev(prev);
+      System.out.println("The Node "+dataInput+" has been deleted");
+    }
   }
 }
