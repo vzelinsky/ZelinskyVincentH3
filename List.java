@@ -137,10 +137,16 @@ public class List {
   public Node findNode(String dataInput) {
     Node t = head;
     while((t.getData()).compareTo(dataInput) != 0) {
-      if(t.getNext() = null) {
-        return ("Error: the Node does not exist"); // cant return string
+      //
+      /* Implement a Null object pattern if time allows
+       */
+      if(t.getNext() == null) {
+        return null;
       }
-      t = t.getNext()
+      else {
+        t = t.getNext();
+      }
     }
+    return t;
   }
 }
