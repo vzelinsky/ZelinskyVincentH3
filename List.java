@@ -45,7 +45,7 @@ public class List {
       tail = head;
     }
     else {
-      //Initializes a traversal Node, t, at head
+      //Initializes a traversal Node, t, to head
       Node t = head;
       //While the String stored in Node t compared to the argument passed to the method returns a negative (A.compareTo(B)==-1) loop
       /*(While the String stored in Node t is alphabetically less than the argument (a<b) loop)
@@ -70,20 +70,36 @@ public class List {
          */
         //Inserts the new Node between Node t and Node t.next
         else if((t.getNext().getData()).compareTo(dataInput) >= 0) {
+          //Initializes a juggler Node, j, to Node t.next to hold it
           Node j = t.getNext();
+          //Creates a new Node and calls the second constructor in Node
+          //The arugment gets passed as the String, the next Node is j(t.next), and the prev Node is Node t
           Node n = new Node(dataInput, j, t);
+          //The new Node is added as the next Node after Node t
           t.setNext(n);
+          //The new Node(t.next) is set as the prev Node before Node j
           j.setPrev(t.getNext());
+          //Breaks the loop
           break;
         }
         else {
+          //Traverse Node t to the Next Node in the List
           t = t.getNext();
         }
       }
-      if((t.getData()).compareTo(dataInput) >= 0) {
-          Node j = head;
-          head = new Node(dataInput, j, null);
-          j.setPrev(head);
+      //Case 4: if the String stored in the head compared to the argument returns a positive (Ab.compareTo (Aa) == 1)
+      /* (if the head is alphabetically greater than the argument (Ab>Aa) the while statement will end immediately and
+       *  the argument must come alphabetically before the head)
+       */
+      //Inserts the new Node before head and makes it the new head
+      if((head.getData()).compareTo(dataInput) >= 0) {
+        //Initializes a juggler Node, j, to head to hold it 
+        Node j = head;
+        //Creates a new Node at head and calls the second constructor in Node
+        //The argument gets passed as the String, the next Node is j(head), and the prev Node is Node null
+        head = new Node(dataInput, j, null);
+        //The new Node(head) is set as the prev Node before Node j
+        j.setPrev(head);
       }
     }
   }
