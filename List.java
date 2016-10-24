@@ -165,25 +165,33 @@ public class List {
   //deleteNode method
   //Calls the findNode method and passes the argument, then deletes the returned Node
   public void deleteNode(String dataInput) {
-    //Calls the findNode method, passes the argument to it, and initializes Node d as the returned Node
+    //Calls the findNode method, passes the argument to it, and initializes a Node to be deleted, d, as the returned Node
     Node d = findNode(dataInput);
     //if the Node returned is null
     if(d == null) {
       //Print that the Node does not exist
-      System.out.println("Node null");
+      System.out.println("Node did not exist");
     }
     else {
+      //Initializes the Node next to the Node after Node d
       Node next = d.getNext();
+      //Initializes the Node prev to the Node before Node d
       Node prev = d.getPrev();
-      
+      //if the Node before Node d is null (Node d is head)
       if(prev == null)
+        //head is now the Node after Node d
         head = next;
       else
+        //The next Node after Node prev is Node next (routing around Node d) 
         prev.setNext(next);
+      //if the Node after Node d is null (Node d is tail)
       if(next == null)
+        //tail is now the Node before Node d
         tail = prev;
       else
+        //The prev Node before Node next is Node prev (routing around Node d)
         next.setPrev(prev);
+      //Print success
       System.out.println("The Node "+dataInput+" has been deleted");
     }
   }
@@ -191,8 +199,13 @@ public class List {
   //deleteList method
   //Removes references to the List, deleting the List
   public void deleteList() {
+    //Makes head null
     this.head = null;
+    //Makes tail null
     this.tail = null;
+    /* Everything else is swept up by garbage collection
+     */
+    //Print success
     System.out.println("The List has been deleted");
   }
 }
