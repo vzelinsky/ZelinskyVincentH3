@@ -135,29 +135,41 @@ public class List {
   //findNode method
   //Traverses the List until it finds a Node with the same String as the arugment and returns that Node
   public Node findNode(String dataInput) {
+    //Initializes a traversal Node, t, at head
     Node t = head;
+    //Initializes an counter int variable, i, with 1
     int i = 1;
+    //While the String stored in Node t compared to the argument passed to the method returns an int not equal to null loop
     while((t.getData()).compareTo(dataInput) != 0) {
-      //
-      /* Implement a Null object pattern if time allows
+      //if t.next is null (if t.next is null then we've traversed the whole list found no Node matching the String)
+      /* Implement a Null object pattern if time allows to save from null.getNext() in the deleteNode method
        */
       if(t.getNext() == null) {
         return null;
       }
       else {
+        //Traverse Node t to the next Node in the List
         t = t.getNext();
+        //Increment the variable i
         i++;
       }
     }
+    //Print the String and the int i (The index number of the Node in the List)
+    /* Only for testing purposes
+     */ 
     System.out.println("The String "+dataInput+" matches Node number "+i);
+    //Return the Node reference
     return t;
   }
   
   //deleteNode method
   //Calls the findNode method and passes the argument, then deletes the returned Node
   public void deleteNode(String dataInput) {
+    //Calls the findNode method, passes the argument to it, and initializes Node d as the returned Node
     Node d = findNode(dataInput);
+    //if the Node returned is null
     if(d == null) {
+      //Print that the Node does not exist
       System.out.println("Node null");
     }
     else {
