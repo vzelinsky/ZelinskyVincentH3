@@ -1,7 +1,7 @@
 /* LinkedLists.java
  * Written by Vincent Zelinsky
  * 
- * Tests methods of ...
+ * Tests methods of List to confirm the creation of a correct Linked List
  */
 public class LinkedLists
 {
