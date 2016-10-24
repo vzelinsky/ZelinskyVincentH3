@@ -24,5 +24,7 @@ public class LinkedLists
     myList.deleteNode("Zack");
     System.out.println(myList.findNode("Joe"));
     myList.printListForward();
+    myList.deleteList();
+    System.out.println(myList.getHead());
   }
 }

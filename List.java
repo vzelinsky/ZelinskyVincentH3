@@ -175,4 +175,12 @@ public class List {
       System.out.println("The Node "+dataInput+" has been deleted");
     }
   }
+  
+  //deleteList method
+  //Removes references to the List, deleting the List
+  public void deleteList() {
+    this.head = null;
+    this.tail = null;
+    System.out.println("The List has been deleted");
+  }
 }
